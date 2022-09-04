@@ -50,11 +50,11 @@ namespace MessageBoardAPI.Controllers
       IQueryable<Post> postQuery = _db.Posts
         .Where(p => p.ParentThreadId == ThreadId)
         .Include(p => p.User);
-      if (StartDate != null)
+      if (StartDate != DateTime.MinValue)
       {
         postQuery = postQuery.Where(p => p.CreationDate >= StartDate);
       }
-      if (EndDate != null)
+      if (EndDate != DateTime.MinValue)
       {
         postQuery = postQuery.Where(p => EndDate >= p.CreationDate);
       }

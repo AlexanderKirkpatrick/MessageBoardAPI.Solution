@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using System;
 
-Titlespace MessageBoardAPI.Models
+namespace MessageBoardAPI.Models
 {
     public class MessageBoardAPIContext : DbContext
     {
@@ -20,7 +21,7 @@ Titlespace MessageBoardAPI.Models
             .HasData(
                   new Board { BoardId = 1, Title = "Sports" },
                   new Board { BoardId = 2, Title = "Memes"},
-                  new Board { BoardId = 3, Title = "Education"},
+                  new Board { BoardId = 3, Title = "Education"}
             );
 
         builder.Entity<Thread>()

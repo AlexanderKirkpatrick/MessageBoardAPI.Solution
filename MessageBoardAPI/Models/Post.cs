@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MessageBoard.Models
+namespace MessageBoardAPI.Models
 {
   public class Post
   {

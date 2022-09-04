@@ -22,11 +22,11 @@ namespace MessageBoardAPI.Controllers
     public async Task<ActionResult<IEnumerable<Post>>> Get(DateTime StartDate, DateTime EndDate, [FromQuery] PaginationFilter filter)
     {
       IQueryable<Post> postQuery = _db.Posts;
-      if (StartDate != null)
+      if (StartDate != DateTime.MinValue)
       {
         postQuery = postQuery.Where(p => p.CreationDate >= StartDate);
       }
-      if (EndDate != null)
+      if (EndDate != DateTime.MinValue)
       {
         postQuery = postQuery.Where(p => EndDate >= p.CreationDate);
       }
