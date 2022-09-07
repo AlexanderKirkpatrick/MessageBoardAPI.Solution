@@ -17,11 +17,11 @@ namespace MessageBoardAPI.Models
 
         builder.Entity<Message>()
             .HasData(
-                new Message { MessageId = 1, Description = "This is a test message", Group = "TEST", Date = DateTime.Parse("2022-01-01,"), Author = "Mark" },
-                new Message { MessageId = 2, Description = "This is a test message", Group = "TEST 1", Date = DateTime.Parse("2022-01-01T10:10:10"), Author = "Mark" },
-                new Message { MessageId = 3, Description = "This is a test message", Group = "TEST", Date = DateTime.Parse("2022-01-01T10:10:10"), Author = "Mark" },
-                new Message { MessageId = 4, Description = "This is a test message", Group = "TEST 1", Date = DateTime.Parse("2022-01-01T10:10:10"), Author = "Jack" },
-                new Message { MessageId = 5, Description = "This is a test message", Group = "TEST", Date = DateTime.Parse("2022-01-01T10:10:10"), Author = "Jack" }
+                new Message { MessageId = 1, Body = "This is a test message", Group = "TEST", Date = DateTime.Parse("2022-01-01,"), Author = "Mark" },
+                new Message { MessageId = 2, Body = "This is a test message", Group = "TEST 1", Date = DateTime.Parse("2022-01-01T10:10:10"), Author = "Mark" },
+                new Message { MessageId = 3, Body = "This is a test message", Group = "TEST", Date = DateTime.Parse("2022-01-01T10:10:10"), Author = "Mark" },
+                new Message { MessageId = 4, Body = "This is a test message", Group = "TEST 1", Date = DateTime.Parse("2022-01-01T10:10:10"), Author = "Jack" },
+                new Message { MessageId = 5, Body = "This is a test message", Group = "TEST", Date = DateTime.Parse("2022-01-01T10:10:10"), Author = "Jack" }
             );
         } 
     }

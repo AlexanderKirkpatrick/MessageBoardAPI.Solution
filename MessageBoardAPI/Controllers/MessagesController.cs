@@ -20,7 +20,6 @@ namespace MessageBoardAPI.Controllers
       _db = db;
     }
 
-    // GET api/Messages
     [HttpGet]
     public async Task<List<Message>> Get(string groups, string authors, DateTime date)
     {

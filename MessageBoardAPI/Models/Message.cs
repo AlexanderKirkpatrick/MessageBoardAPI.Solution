@@ -8,7 +8,7 @@ namespace MessageBoardAPI.Models
   {
         public int MessageId { get; set; }
         [Required]
-        public string Description { get; set; }
+        public string Body { get; set; }
         [Required]
         public string Group { get; set; }
         [Required]

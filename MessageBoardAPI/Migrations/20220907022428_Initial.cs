@@ -14,7 +14,7 @@ namespace MessageBoardAPI.Migrations
                 {
                     MessageId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Description = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
+                    Body = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
                     Group = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Author = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false)
@@ -26,14 +26,14 @@ namespace MessageBoardAPI.Migrations
 
             migrationBuilder.InsertData(
                 table: "Messages",
-                columns: new[] { "MessageId", "Author", "Date", "Description", "Group" },
+                columns: new[] { "MessageId", "Author", "Body", "Date", "Group" },
                 values: new object[,]
                 {
-                    { 1, "Mark", new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "This is a test message", "TEST" },
-                    { 2, "Mark", new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified), "This is a test message", "TEST 1" },
-                    { 3, "Mark", new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified), "This is a test message", "TEST" },
-                    { 4, "Jack", new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified), "This is a test message", "TEST 1" },
-                    { 5, "Jack", new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified), "This is a test message", "TEST" }
+                    { 1, "Mark", "This is a test message", new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "TEST" },
+                    { 2, "Mark", "This is a test message", new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified), "TEST 1" },
+                    { 3, "Mark", "This is a test message", new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified), "TEST" },
+                    { 4, "Jack", "This is a test message", new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified), "TEST 1" },
+                    { 5, "Jack", "This is a test message", new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified), "TEST" }
                 });
         }
 

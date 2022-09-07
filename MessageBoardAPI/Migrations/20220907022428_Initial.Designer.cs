@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MessageBoardAPI.Migrations
 {
     [DbContext(typeof(MessageBoardAPIContext))]
-    [Migration("20220904221652_Initial")]
+    [Migration("20220907022428_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,12 +29,12 @@ namespace MessageBoardAPI.Migrations
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Description")
+                    b.Property<string>("Body")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Group")
                         .IsRequired()
@@ -49,40 +49,40 @@ namespace MessageBoardAPI.Migrations
                         {
                             MessageId = 1,
                             Author = "Mark",
+                            Body = "This is a test message",
                             Date = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "This is a test message",
                             Group = "TEST"
                         },
                         new
                         {
                             MessageId = 2,
                             Author = "Mark",
+                            Body = "This is a test message",
                             Date = new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified),
-                            Description = "This is a test message",
                             Group = "TEST 1"
                         },
                         new
                         {
                             MessageId = 3,
                             Author = "Mark",
+                            Body = "This is a test message",
                             Date = new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified),
-                            Description = "This is a test message",
                             Group = "TEST"
                         },
                         new
                         {
                             MessageId = 4,
                             Author = "Jack",
+                            Body = "This is a test message",
                             Date = new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified),
-                            Description = "This is a test message",
                             Group = "TEST 1"
                         },
                         new
                         {
                             MessageId = 5,
                             Author = "Jack",
+                            Body = "This is a test message",
                             Date = new DateTime(2022, 1, 1, 10, 10, 10, 0, DateTimeKind.Unspecified),
-                            Description = "This is a test message",
                             Group = "TEST"
                         });
                 });
